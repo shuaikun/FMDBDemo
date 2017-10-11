@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L82-OB-iJY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="xY4-Sc-d7z">
+            <objects>
+                <tableViewController id="Vnb-Rt-lLM" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GcT-Rq-J0n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fyR-gd-DC6">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fyR-gd-DC6" id="xYF-VQ-mqF">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Vnb-Rt-lLM" id="cDm-B8-MA9"/>
+                            <outlet property="delegate" destination="Vnb-Rt-lLM" id="eUj-4e-74p"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="eWc-1A-jSK">
+                        <barButtonItem key="leftBarButtonItem" title="删除" id="O4F-h1-sKH">
+                            <connections>
+                                <action selector="deletAction:" destination="Vnb-Rt-lLM" id="QjI-z6-Hjt"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="添加数据" id="WLS-de-cxw">
+                                <connections>
+                                    <action selector="addAction:" destination="Vnb-Rt-lLM" id="dXf-SN-Oy7"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="修改" id="1aU-LO-gVY">
+                                <connections>
+                                    <action selector="chengePersonMessge:" destination="Vnb-Rt-lLM" id="ZuO-Pe-MjL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="添加新字段" id="O6U-b0-Jmq">
+                                <connections>
+                                    <action selector="addNewFiledAction:" destination="Vnb-Rt-lLM" id="lWR-3d-jGI"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fy6-20-83X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="175.86206896551727"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2Mq-6i-tDH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L82-OB-iJY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jpW-aV-roR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vnb-Rt-lLM" kind="relationship" relationship="rootViewController" id="ZAX-tg-3iE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZnH-5o-k0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="175.86206896551727"/>
+        </scene>
+    </scenes>
+</document>
